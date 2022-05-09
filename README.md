@@ -6,6 +6,15 @@ A website aimed to help students with their projects/ ideas/ work, by matching w
 
 Tip: click on one of the professors image.
 
+## Tech / Tools / Methodologies
+ - HTML
+ - CSS
+ - Javascript
+ - 
+
+## Conclusion
+It's hard pulling an all nighter... Sleep = Best Debugger.
+
 ## Developers
 This project was made by **Code Cadets** at **Academia de Código**, Team #~~Magnific0x~~ Argicultores
  - Nuno Teixeira
@@ -14,8 +23,3 @@ This project was made by **Code Cadets** at **Academia de Código**, Team #~~Mag
  - José Pereira
  - Filipe Rodrigues
  - Nuno Silva
-
-## Tech / Tools / Methodologies
-
-## Conclusion
-It's hard pulling an all nighter... Sleep = Best Debugger.
