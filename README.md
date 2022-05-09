@@ -10,7 +10,8 @@ Tip: click on one of the professors image.
  - HTML
  - CSS
  - Javascript
- - 
+ - Photoshop
+ - Scrum
 
 ## Conclusion
 It's hard pulling an all nighter... Sleep = Best Debugger.
