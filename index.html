@@ -1,0 +1,1030 @@
+<html>
+  <head>
+    <title>Stupid Community</title>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+        font-family: "Inconsolata", sans-serif;
+      }
+
+      .bgimg {
+        background-position: center;
+        background-size: cover;
+        background-image: url("./resources/logo.jpeg");
+        min-height: 58%;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      #prof-column {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      #prof-title {
+        padding-bottom: 30px;
+      }
+
+      #prof-1 {
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      #prof-2 {
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      #prof-3 {
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      #student-column {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      #student-title {
+        padding-bottom: 30px;
+      }
+
+      #student-1 {
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      #student-2 {
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      #student-3 {
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+
+      #join {
+        padding-top: 20px;
+        display: flex;
+        font-family: "Inconsolata";
+        justify-content: center;
+        align-items: center;
+      }
+
+      #join2 {
+        padding-top: 20px;
+        padding-left: 45px;
+        display: flex;
+        font-family: "Inconsolata";
+        justify-content: center;
+        align-items: center;
+      }
+
+      #lunch {
+        padding-top: 20px;
+        display: flex;
+        font-family: "Inconsolata";
+        justify-content: center;
+        align-items: center;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .openBtn {
+        display: flex;
+        justify-content: left;
+      }
+      .openButton {
+        border: none;
+        border-radius: 5px;
+        background-color: #1c87c9;
+        color: white;
+        padding: 14px 20px;
+        cursor: pointer;
+        position: fixed;
+      }
+      .loginPopup {
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+      .formPopup {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 5%;
+        transform: translate(-50%, 5%);
+        border: 3px solid #999999;
+        z-index: 9;
+      }
+      .formContainer {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        max-width: 300px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .formContainer input[type="text"],
+      .formContainer input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 20px 0;
+        border: none;
+        background: #eee;
+      }
+      .formContainer input[type="text"]:focus,
+      .formContainer input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .formContainer .btn {
+        padding: 12px 20px;
+        border: none;
+        background-color: #8ebf42;
+        color: #fff;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 15px;
+        opacity: 100;
+      }
+      .formContainer .cancel {
+        background-color: #cc0000;
+      }
+      .formContainer .btn:hover,
+      .openButton:hover {
+        opacity: 100;
+      }
+
+      #prof-1 {
+        width: 200px;
+        height: 280px;
+      }
+
+      #prof-2 {
+        width: 200px;
+        height: 280px;
+      }
+
+      #prof-3 {
+        width: 200px;
+        height: 280px;
+      }
+
+      #student-1 {
+        width: 200px;
+        height: 280px;
+      }
+
+      #student-2 {
+        width: 200px;
+        height: 280px;
+      }
+
+      #student-3 {
+        width: 200px;
+        height: 280px;
+      }
+
+
+      #footer {
+   position:relative;
+   bottom:0;
+   width:100%;
+   height:60px;
+   background:#6cf;
+}
+
+      #fb {
+  width: 30px;
+  height: 30px;
+}
+#linkedin {
+  width: 35px;
+  height: 35px;
+}
+
+      #button {
+        padding-top: 25px;
+        padding-left: 105px;
+        display: flex;
+        align-items: center;
+      }
+
+      #buttonLogin{
+        display: flex;
+        align-items: center;
+        padding-left: 108px;
+        padding-top: 25px;
+      }
+
+      #buttonDinner{
+        display: flex;
+        align-items: center;
+        padding-left: 85px;
+        padding-top: 25px;
+      }
+
+      .popup2 {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup2 .popuptext {
+ display:none;
+ width: 100vw;
+ height:100vh;
+ background: rgba(0,0,0,.8);
+ border-radius: 6px;
+ position: fixed;
+ z-index:1;
+ top:0;
+ left:0;
+ right:0;
+ bottom:0;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup2 .show {
+ display:block;
+ -webkit-animation: fadeIn 1s;
+ animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+ from {opacity: 0;} 
+ to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+ from {opacity: 0;}
+ to {opacity:1 ;}
+}
+
+.coverlay{position:absolute;
+ bottom: 10px;
+ left: 0;
+ right: 0;
+ height: 100%;
+ width: 100%;
+ background: rgba(250,250,250,.0);
+ border-radius: 8px 8px 0 0;
+ transition: background .5s;
+ 
+ background-position: center bottom; 
+ background-repeat:no-repeat;
+ background-size:15%;
+}
+
+.coverlay:hover{
+ background: rgba(250,250,250,.5);
+ 
+ background-position: center; 
+ background-repeat:no-repeat;
+ background-size:16%;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Links (sit on top) -->
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+        <style>
+          body {
+            background-image: url("./resources/background.jpeg");
+          }
+          </style>
+      <div class="w3-row w3-padding w3-white">
+        <div class="w3-col s3">
+          <a href="#home" class="disabled-hover w3-button w3-block w3-white"
+            ><img src="./resources/home.jpg"
+          /></a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#about" class="disabled-hover w3-button w3-block w3-white"
+            ><img src="./resources/About.jpg"
+          /></a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#menu" class="w3-button w3-block w3-white"
+            ><img src="./resources/specialButton.jpg"
+          /></a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#where" class="w3-button w3-block w3-white"
+            ><img src="./resources/Experience.jpg"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container" id="home"></header>
+
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-large">
+      
+      <div class="w3-center w3-margin-top:40">
+        <form>
+          <input type="text" id="username" minlength="3" required>
+          <input type="password" id="password" minlength="6" required>
+          <input type="submit" value="Login" onclick="login()">
+          <input type="submit" value="Register" onclick="register(999)">
+        </form>
+      </div>
+
+
+      <!-- About Container -->
+      <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width: 700px">
+          <h5 class="w3-center w3-padding-64">
+            <span class="w3-tag w3-wide">ABOUT US</span>
+          </h5>
+          <p>
+            We are the “Specials”. We are not dumb. That’s what a dumb person
+            would say. We just take 5 minutes to answer 2+2 and that’s okay.
+          </p>
+          <p>
+            Here we provide a “special” place for all the “specials” out there.
+            Are you a wannabe lawyer who was found out? Join us and be
+            “Special”. Are you a poser social activist? Join us and be
+            “Special”. Are you a racist elderly millionaire? Join us and be
+            “Special”!
+          </p>
+
+          <img
+            src="./resources/sala.jpeg"
+            style="width: 100%; max-width: 1000px"
+            class="w3-margin-top"
+          />
+        </div>
+      </div>
+
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width: 700px">
+          <h5 class="w3-center w3-padding-48">
+            <span class="w3-tag w3-wide">OUR "SPECIAL" COMMUNITY</span>
+          </h5>
+
+          <div
+            class="w3-row w3-center w3-card w3-padding"
+            style="max-width: 700px"
+          >
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Students');"
+              id="myLink"
+            >
+              <div class="w3-col s6 tablink w3-dark-grey">Alumni</div>
+            </a>
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Professors');"
+            >
+              <div class="w3-col s6 tablink">Professors</div>
+            </a>
+          </div>
+
+          <div
+            id="Students"
+            class="w3-container menu w3-padding-48 w3-card"
+            style="display: block"
+          >
+            <h7 id="student-title"
+              >Find out about our “Failure” program and other alumni students
+              experience:</h7
+            >
+
+            <div id="student-column">
+              <div>
+                <img id="student-1" src="./resources/savage.jpeg" ALIGN="left" />
+                <h5>Silva Hawthorne</h5>
+                <br />
+                <p>
+                  Aside from being a formidable student, he is also a moist
+                  towelette tycoon, who owns his own award winning company of
+                  moist towelettes. He also indulges into oblivious sexist and
+                  racist comments.
+                </p>
+              </div>
+              <div>
+                <img id="student-2" src="./resources/amulher.jpeg" ALIGN="left" />
+                <h5>Annie Cruz</h5>
+                <br />
+                <p>
+                  Is our most successful student with a heavy addiction to
+                  Adderall.
+                </p>
+                <p>Currently she is doing an internship in the FBI.</p>
+              </div>
+              <div>
+                <img id="student-3" src="./resources/aquelequesabe.jpeg" align="left" />
+                <h5>Jeff Costa</h5>
+                <br />
+                Was caught with no lawyer degree, which made him enrolled in our
+                dear community. Due to his experience as a former “lawyer”, the
+                Dean and Señor Rodrigues seek help from him, clearly
+                highlighting our student’s brilliance.
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="Professors"
+            class="w3-container menu w3-padding-48 w3-card"
+            style="display: none"
+          >
+            <h7 id="prof-title"
+              >The “best” teachers are here to each to be “special”. Check them
+              out and who knows, you can be the next “Failure”:</h7
+            >
+
+            <div id="prof-column">
+              <div class="popup2" onclick="myFunctionlowery()">
+                <img id="prof-1" src="./resources/ze.jpeg" ALIGN="left" />
+                <div class="coverlay">
+                  <span class="popuptext" id="lowery">
+                   <div style="position:relative; top:10vh; width:100%; max-width:1000px; 
+                     margin:0 auto;">
+                    <iframe style="width:100%; max-width:1000px; height:50vw; max-height:700px;" 
+                     src="./resources/video1.mp4"
+                     frameborder="0" allowfullscreen>
+                    </iframe>
+                   </div>
+                  </span>
+                 </div>
+                <h5>Dean Zé Pelton</h5>
+                <br />
+                The leader of our “Special” Community. He has a fictional degree
+                in Education and will ask the students for small favours.
+              </div>
+              <div class="popup2" onclick="myFunctionlowery()">
+                <img id="prof-2" src="./resources/oespanhol-F.jpeg" alt="" style="" align="left" />
+                <div class="coverlay">
+                  <span class="popuptext" id="lowery">
+                   <div style="position:relative; top:10vh; width:100%; max-width:1000px; 
+                     margin:0 auto;">
+                    <iframe style="width:100%; max-width:1000px; height:50vw; max-height:700px;" 
+                     src="./resources/video1.mp4"
+                     frameborder="0" allowfullscreen>
+                    </iframe>
+                   </div>
+                  </span>
+                 </div>
+                <h5>Señor Rodrigues</h5>
+                <br />
+                Is an “unhinged” Spanish teacher with no teaching qualifications,
+                and who has also signed up recently to be a “special” student.
+              </div>
+              <div class="popup2" onclick="myFunctionlowery()">
+                <img id="prof-3" src="./resources/nunoT.jpeg" align="left" />
+                <div class="coverlay">
+                  <span class="popuptext" id="lowery">
+                   <div style="position:relative; top:10vh; width:100%; max-width:1000px; 
+                     margin:0 auto;">
+                    <iframe style="width:100%; max-width:1000px; height:50vw; max-height:700px;" 
+                     src="./resources/video1.mp4"
+                     frameborder="0" allowfullscreen>
+                    </iframe>
+                   </div>
+                  </span>
+                 </div>
+                <h5>Prof. Ian Texeira</h5>
+                <br />
+                Is a psychology teacher who hates Señor Rodrigues, and will do
+                anything to con Costa out of his Lexus.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-container" id="where" style="padding-bottom: 32px">
+        <div class="w3-content" style="max-width: 700px">
+          <h5 class="w3-center w3-padding-48">
+            <span class="w3-tag w3-wide">EXPERIENCES</span>
+          </h5>
+
+          <div
+            class="w3-row w3-center w3-card w3-padding"
+            style="max-width: 700px"
+          >
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Study');"
+              id="studyLink"
+            >
+              <div class="w3-col s6 tablink w3-dark-grey">Study Group</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Dinner');">
+              <div class="w3-col s6 tablink">Don't eat alone</div>
+            </a>
+          </div>
+
+          <div
+            id="Study"
+            class="w3-container menu w3-padding-48 w3-card"
+            style="display: block"
+          >
+            <h7 id="prof-title">
+              Are you striving to enter the “Failure” program? Take a look at
+              our study group feature so you can team-up with other “specials”,
+              so together you can reach your goals!
+            </h7>
+
+            <div id="join">
+              <br />
+              <button
+                id="myPopup"
+                class="popup"
+                onclick="openForm()"
+                type="button"
+              >
+                Join a study group here
+              </button>
+              <div>
+                <form class="formContainer">
+                  <div class="loginPopup">
+                    <div class="formPopup w3-white w3-center" id="popupForm">
+                      <div class="row justify-content-md-center">
+                        <div class="col-8">
+                            <input class="form-check form-check-inline" placeholder="ENTER YOUR USERNAME" id="usernameR" type="text">
+                          <p>
+                            <b
+                              >1 - Rate how dumb you think you are to join this
+                              study group</b
+                            >
+                          </p>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio1"
+                              value="option1"
+                            />
+                            <label class="form-check-label" for="inlineRadio1"
+                              >1</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >2</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio3"
+                              value="option3"
+                            />
+                            <label class="form-check-label" for="inlineRadio3"
+                              >3</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio4"
+                              value="option4"
+                            />
+                            <label class="form-check-label" for="inlineRadio3"
+                              >4</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio5"
+                              value="option5"
+                            />
+                            <label class="form-check-label" for="inlineRadio3"
+                              >5</label
+                            >
+                          </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                          <div class="col-12">
+                            <p>
+                              <b>2 - What's your favorite time to study?</b>
+                            </p>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="inlineRadioOptions1"
+                                id="morningg"
+                                value="option1"
+                              />
+                              <label class="form-check-label" for="inlineRadio1"
+                                >Morning</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="inlineRadioOptions1"
+                                id="afternoon1"
+                                value="option2"
+                              />
+                              <label class="form-check-label" for="inlineRadio2"
+                                >Afternoon</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="inlineRadioOptions1"
+                                id="nightt"
+                                value="option3"
+                              />
+                              <label class="form-check-label" for="inlineRadio3"
+                                >Night</label
+                              >
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="row">
+                            <div class="col-12">
+                              <p><b>3 - Do you like to study with music?</b></p>
+                              <div class="form-check form-check-inline">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions2"
+                                  id="yes"
+                                  value="option1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="inlineRadio1"
+                                  >Yes</label
+                                >
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions2"
+                                  id="no"
+                                  value="option2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="inlineRadio2"
+                                  >No</label
+                                >
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <p>
+                                <b
+                                  >4 - Do you prefer a talkative or a silent
+                                  group?</b
+                                >
+                              </p>
+                              <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="inlineRadioOptions3"
+                                    id="talkative"
+                                    value="option1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="inlineRadio1"
+                                    >Talkative</label
+                                  >
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="inlineRadioOptions3"
+                                    id="silent"
+                                    value="option2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="inlineRadio2"
+                                    >Silent</label
+                                  >
+                                </div>
+                              </div>
+                              <br />
+
+                              <div class="row">
+                                <p>
+                                  <b
+                                    >5 - Do you prefer to study online or in
+                                    person?</b
+                                  >
+                                </p>
+                                <div class="col-12">
+                                  <div class="form-check form-check-inline">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="inlineRadioOptions4"
+                                      id="person"
+                                      value="option1"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="inlineRadio1"
+                                      >In person</label
+                                    >
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="inlineRadioOptions4"
+                                      id="online"
+                                      value="option2"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="inlineRadio2"
+                                      >Online</label
+                                    >
+                                  </div>
+                                </div>
+                                <br />
+                                <div id="buttonLogin">
+                                  <button type="submit" class="btn" onclick="closeForm(1)">
+                                    Register
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn cancel"
+                                    onclick="closeForm()"
+                                  >
+                                    Close
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- BUTÕUN FILHU DA PUTAIN -->
+          <div
+            id="Dinner"
+            class="w3-container menu w3-padding-48 w3-card"
+            style="display: none"
+          >
+            <h7 id="student-title">
+              Eating alone can get lonely. Group up with other “specials” and
+              have a big “special” get together! Fill the form so you can get
+              paired with “specials” like you.
+            </h7>
+              <div>
+                <div id="join2">
+                  <br />
+                  <button
+                    id="myPopup"
+                    class="popup"
+                    onclick="openFormEater()"
+                    type="button"
+                  >
+                    Don't eat alone
+                  </button>
+                  <div>
+                    <form class="formContainer">
+                      <div class="loginPopup">
+                        <div class="formPopup w3-white w3-center" id="popupFormEater">
+                          <div class=" container">
+                            <div class="row">
+                                <div class="col-12">
+                                  <input class="form-check form-check-input" type="text" id="usernameD" placeholder="ENTER YOUR NAME">
+                                <p><b>1 - How picky do you consider yourself regarding food stuff?</b></p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio22" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio33" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio44" value="option4">
+                                    <label class="form-check-label" for="inlineRadio3">4</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio55" value="option5">
+                                    <label class="form-check-label" for="inlineRadio3">5</label>
+                                  </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-12">
+                                <p><b>2 - Loud dinners or peaceful lunches?</b></p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="morning" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Party!!!!!</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="afternoon" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Quiet ones</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="night" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">I like both</label>
+                                  </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-12">
+                                <p><b>3 - What kind of diet do you have?</b></p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="omni" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Omnivorous</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="veggie" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Vegetarian</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="vegan" value="option3">
+                                    <label class="form-check-label" for="inlineRadio2">Vegan</label>
+                                  </div>
+                            </div>
+                            <div class="row">
+                                <p><b>4 - Would you mind to eat in the canteen or is it much poor for you?</b></p>
+                                <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="canteen" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Canteen is awesome</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="restaurant" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">I’d rather eat at a restaurant</label>
+                                  </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <p><b>5 - Do you like picnics? Open for "Community in the park" evenings?</b></p>
+                                <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="yess" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Sure</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="noo" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Picnic? I hate &ltbugs_&gt! </label>
+                                  </div>
+                            </div>
+                            <br>
+                        </div>
+                        <div id="buttonDinner">
+                          <button type="submit" class="btn" onclick="closeFormEater(1)">
+                            Confirm
+                          </button>
+                          <button
+                            type="button"
+                            class="btn cancel"
+                            onclick="closeFormEater()"
+                          >
+                            Close
+                          </button>
+                        </div>
+                        </div>
+                      </div>
+                    </form>
+              </div>
+            </div>
+          </div>    
+
+          <!-- Contact/Area Container -->
+        </div>
+      </div>
+      <!-- End page content -->
+    </div>
+  </div>
+</div>
+</div>
+    
+    <!-- Footer -->
+    <footer class="w3-center w3-padding-48 w3-large">
+      <p> Checkout our socials <a href="https://www.facebook.com" title="Comunity_Facebook" target="_blank" class="w3-hover-text-green"><img id="fb"src="./resources/facebook.jpeg"></a>  
+        <a href="https://www.linkedin.com" title="Comunity_LinkedIn"target="_blank" class="w3-hover-text-green"><img id="linkedin" src="./resources/Illustration-of-Linkedin-icon-on-transparent-background-PNG.png"></a></p>
+      <p>Check the “special” study breaks, </p>
+      <p>Every Friday!</p>
+   </footer>
+
+    <script>
+      // Tabbed Menu
+      function openMenu(evt, menuName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " w3-dark-grey",
+            ""
+          );
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+      }
+      document.getElementById("myLink").click();
+
+      function openForm() {
+        document.getElementById("popupForm").style.display = "block";
+      }
+      function closeForm(doisNuemrosQuaisquerMentiraESoUm) {
+        if (doisNuemrosQuaisquerMentiraESoUm) {
+          var chosenRoom = Math.trunc(Math.random() * JSON.parse(localStorage.getItem("rooms")).length);
+          alert("MR " + document.getElementById('usernameR').value + " WILL BE A STUDENT OF: " + JSON.parse(localStorage.getItem("rooms"))[chosenRoom]);
+          register(chosenRoom);
+        }
+        document.getElementById("popupForm").style.display = "none";
+      }
+
+      function openFormEater() {
+        document.getElementById("popupFormEater").style.display = "block";
+      }
+      function closeFormEater(umNumeroQualquer) {
+        if (umNumeroQualquer) {
+          var chosenRoom = Math.trunc(Math.random() * JSON.parse(localStorage.getItem("groups")).length);
+          alert("MR " + document.getElementById('usernameD').value + " WILL BE JOINING GROUP NUMBER: " + JSON.parse(localStorage.getItem("groups"))[chosenRoom]);
+        }
+        document.getElementById("popupFormEater").style.display = "none";
+      }
+
+      function myFunctionlowery() {
+    var popup = document.getElementById("lowery");
+    popup.classList.toggle("show");
+}
+    </script>
+  </body>
+</html>
